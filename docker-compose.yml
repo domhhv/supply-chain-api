@@ -2,6 +2,10 @@ version: '3'
 services:
   api:
     build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run start:dev
     environment:
       - NODE_ENV=development
       - PGHOST=postgres
@@ -21,4 +25,4 @@ services:
       - POSTGRES_PASSWORD=local_db_password
       - POSTGRES_DB=supply_chain
     ports:
-      - "5432:5432"
+      - "5433:5432"
