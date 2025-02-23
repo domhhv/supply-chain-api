@@ -4,6 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { SupplyChainModule } from './supply-chain/supply-chain.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { AppService } from './app.service';
       },
       inject: [ConfigService],
     }),
+    SupplyChainModule,
   ],
   controllers: [AppController],
   providers: [AppService],
