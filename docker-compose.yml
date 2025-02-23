@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    build: .
+    environment:
+      - NODE_ENV=development
+      - PGHOST=postgres
+      - PGPORT=5432
+      - PGUSER=postgres
+      - PGPASSWORD=local_db_password
+      - PGDATABASE=supply_chain
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=local_db_password
+      - POSTGRES_DB=supply_chain
+    ports:
+      - "5432:5432"
