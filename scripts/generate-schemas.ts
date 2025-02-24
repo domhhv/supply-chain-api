@@ -2,7 +2,6 @@ import 'reflect-metadata';
 import * as fs from 'fs';
 import * as path from 'path';
 
-import { getFromContainer, MetadataStorage } from 'class-validator';
 import { validationMetadatasToSchemas } from 'class-validator-jsonschema';
 
 import { CreateSupplyChainEventDto } from '../src/supply-chain/dto/create-supply-chain-event.dto';
