@@ -38,6 +38,10 @@ export class SupplyChainService {
     return this.itemRepository.save(item);
   }
 
+  async getAllItems(): Promise<SupplyChainItem[]> {
+    return this.itemRepository.find({ relations: ['events'] });
+  }
+
   async addEvent(
     itemId: string,
     dto: CreateSupplyChainEventDto,
