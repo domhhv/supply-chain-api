@@ -1,11 +1,12 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { SupplyChainItem } from './entities/supply-chain-item.entity';
-import { SupplyChainEvent } from './entities/supply-chain-event.entity';
+
+import { CreateSupplyChainEventDto } from './dto/create-supply-chain-event.dto';
 import { CreateSupplyChainItemDto } from './dto/create-supply-chain-item.dto';
 import { UpdateSupplyChainItemDto } from './dto/update-supply-chain-item.dto';
-import { CreateSupplyChainEventDto } from './dto/create-supply-chain-event.dto';
+import { SupplyChainEvent } from './entities/supply-chain-event.entity';
+import { SupplyChainItem } from './entities/supply-chain-item.entity';
 
 @Injectable()
 export class SupplyChainService {

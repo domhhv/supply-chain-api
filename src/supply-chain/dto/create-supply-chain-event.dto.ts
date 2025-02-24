@@ -1,5 +1,5 @@
-import { IsNotEmpty, IsString, IsOptional } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
+import { IsNotEmpty, IsString, IsOptional } from 'class-validator';
 
 export class CreateSupplyChainEventDto {
   @ApiProperty({ description: 'Location of the event' })

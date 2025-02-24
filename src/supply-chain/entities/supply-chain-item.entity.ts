@@ -1,4 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+
 import { SupplyChainEvent } from './supply-chain-event.entity';
 
 @Entity()
