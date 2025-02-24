@@ -8,7 +8,8 @@ import { SupplyChainService } from './supply-chain.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([SupplyChainItem, SupplyChainEvent])],
-  providers: [SupplyChainService],
   controllers: [SupplyChainController],
+  providers: [SupplyChainService],
+  exports: [SupplyChainService],
 })
 export class SupplyChainModule {}
