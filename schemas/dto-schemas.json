@@ -1,0 +1,56 @@
+{
+  "CreateSupplyChainEventDto": {
+    "properties": {
+      "location": {
+        "type": "string",
+        "minLength": 1
+      },
+      "custodian": {
+        "type": "string",
+        "minLength": 1
+      },
+      "note": {
+        "type": "string"
+      }
+    },
+    "type": "object",
+    "required": [
+      "location",
+      "custodian"
+    ]
+  },
+  "CreateSupplyChainItemDto": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "color": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      }
+    },
+    "type": "object",
+    "required": [
+      "name"
+    ]
+  },
+  "PartialTypeClass": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "color": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      }
+    },
+    "type": "object"
+  }
+}
+
