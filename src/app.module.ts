@@ -25,6 +25,7 @@ import { SupplyChainModule } from './supply-chain/supply-chain.module';
             autoLoadEntities: true,
           };
         }
+
         return {
           type: 'postgres',
           host: configService.get<string>('PGHOST'),
