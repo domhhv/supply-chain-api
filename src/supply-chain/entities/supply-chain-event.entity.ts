@@ -6,6 +6,7 @@ import {
   CreateDateColumn,
   JoinColumn,
 } from 'typeorm';
+
 import { SupplyChainItem } from './supply-chain-item.entity';
 
 @Entity()

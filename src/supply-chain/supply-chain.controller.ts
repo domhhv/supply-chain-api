@@ -1,9 +1,10 @@
 import { Controller, Post, Body, Patch, Param, Get } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
-import { SupplyChainService } from './supply-chain.service';
+
+import { CreateSupplyChainEventDto } from './dto/create-supply-chain-event.dto';
 import { CreateSupplyChainItemDto } from './dto/create-supply-chain-item.dto';
 import { UpdateSupplyChainItemDto } from './dto/update-supply-chain-item.dto';
-import { CreateSupplyChainEventDto } from './dto/create-supply-chain-event.dto';
+import { SupplyChainService } from './supply-chain.service';
 
 @ApiTags('supply-chain')
 @Controller('supply-chain')
