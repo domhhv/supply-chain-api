@@ -4,9 +4,11 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 import { AppModule } from './app.module';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
+import { JsonSchemaValidationPipe } from './common/pipes/json-schema-validation.pipe';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
   app.enableCors();
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(
@@ -18,6 +20,7 @@ async function bootstrap() {
       validateCustomDecorators: true,
     }),
   );
+  app.useGlobalPipes(new JsonSchemaValidationPipe());
 
   SwaggerModule.setup(
     'api',
