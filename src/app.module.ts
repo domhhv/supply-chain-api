@@ -21,7 +21,7 @@ import { SupplyChainModule } from './supply-chain/supply-chain.module';
           return {
             type: 'postgres',
             url: configService.get<string>('DATABASE_URL'),
-            synchronize: false,
+            synchronize: true,
             autoLoadEntities: true,
           };
         }
